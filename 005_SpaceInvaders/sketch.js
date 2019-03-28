@@ -1,49 +1,69 @@
-var s;
-var scl = 20;
-var food;
-var score;
+var ship;
+var flowers = [];
+var drops = [];
 
 function setup() {
-	createCanvas(600, 600);
-	s = new Snake();
-	frameRate(10);
-	pickLocation();
-	score = createP('Score: ');
-}
-
-function pickLocation() {
-	var cols = floor(width / scl);
-	var rows = floor(height / scl);
-	food = createVector(floor(random(cols)), floor(random(rows)));
-	food.mult(scl);
-}
-
-function mousePressed() {
-	s.total++;
+	createCanvas(600, 400);
+	ship = new Ship();
+	for (var i = 0; i < 6; i++) {
+		flowers[i] = new Flower(i * 80 + 80, 60);
+	}
 }
 
 function draw() {
-	background(100);
+	background(51);
+	ship.show();
+	ship.move();
 
-	if (s.eat(food)) {
-		pickLocation();
+	for (var i = 0; i < drops.length; i++) {
+		drops[i].show();
+		drops[i].move();
+		for (var j = 0; j < flowers.length; j++) {
+			if (drops[i].hits(flowers[j])) {
+				flowers[j].grow();
+				drops[i].evaporate();
+			}
+		}
 	}
-	s.death();
-	s.update();
-	s.show();
 
-	fill(255, 0, 100);
-	rect(food.x, food.y, scl, scl);
+	var edge = false;
+
+	for (var i = 0; i < flowers.length; i++) {
+		flowers[i].show();
+		flowers[i].move();
+		if (flowers[i].x > width || flowers[i].x < 0) {
+			edge = true;
+		}
+	}
+
+	if (edge) {
+		for (var i = 0; i < flowers.length; i++) {
+			flowers[i].shiftDown();
+		}
+	}
+
+	for (var i = drops.length - 1; i >= 0; i--) {
+		if (drops[i].toDelete) {
+			drops.splice(i, 1);
+		}
+	}
+}
+
+function keyReleased() {
+	if (key != ' ') {
+		ship.setDir(0);
+	}
 }
 
 function keyPressed() {
-	if (keyCode === UP_ARROW) {
-		s.dir(0, -1);
-	} else if (keyCode === DOWN_ARROW) {
-		s.dir(0, 1);
-	} else if (keyCode === RIGHT_ARROW) {
-		s.dir(1, 0);
+	if (key === ' ') {
+		var drop = new Drop(ship.x, height);
+		drops.push(drop);
+	}
+
+	if (keyCode === RIGHT_ARROW) {
+		ship.setDir(1);
 	} else if (keyCode === LEFT_ARROW) {
-		s.dir(-1, 0);
+		ship.setDir(-1);
 	}
 }
