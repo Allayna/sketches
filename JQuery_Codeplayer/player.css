@@ -1,0 +1,75 @@
+body {
+	font-family: sans-serif;
+	padding:0;
+	margin:0;
+	border-bottom:1px solid lightslategrey;
+
+}
+#header {
+	width:100%;
+	background-color:#CCCCFF;
+	padding:5px;
+	height:30px;
+	border-bottom:1px solid lightslategray;
+}
+
+#logo {
+	padding:3px 5px;
+	float:left;
+	font-weight: bold;
+	font-size:120%;
+}
+
+#bodyContainer {
+	border-bottom:1px solid lightslategray;
+}
+
+#buttonContainer {
+	width:233px;
+	margin:0 auto;
+}
+
+.toggleButton {
+	float:left;
+	padding:6px;
+	border:1px solid grey;
+	border-right:none;
+	font-size: 90%;
+	background-color:#b3b3ff;
+}
+
+#html {
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+#output {
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-right:1px solid grey;
+}
+.active {
+	background-color:#9999FF;
+}
+
+.highlightedButton {
+	background-color:#6666FF;
+}
+
+textarea {
+	resize:none;
+	border-top: none;
+	border-color: lightslategrey;
+}
+
+.panel {
+	float:left;
+	width:50%;
+	border-left:none;
+	padding-left:5px;
+}
+iframe {
+	border:none;
+}
+.hidden {
+	display:none;
+}
