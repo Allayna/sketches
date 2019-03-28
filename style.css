@@ -16,7 +16,7 @@ body {
 }
 .card {
 	color:rgb(220, 247, 223);
-	background:rgb(39, 75, 27, 0.8);
+	background:rgb(27, 56, 18, 0.8);
 	text-align:center;
 	width: 280px;
 	height: 180px;
@@ -25,11 +25,11 @@ body {
 
 .jumbotron {
 	padding-top:70px;
-	background:rgba(39, 75, 27, 0.8);
+	background:rgba(27, 56, 18, 0.8);
 	text-align:center;
 }
 .describe {
-	width:650px
+	width:700px
 }
 
 .container-fluid {
@@ -42,10 +42,6 @@ body {
 .row {
 	color:white;
 	align-items: center;
-}
-
-.btn {
-	margin: 0 15px;
 }
 
 .card-text {
