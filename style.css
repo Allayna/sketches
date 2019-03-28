@@ -16,8 +16,13 @@ h2 {
 	align-items: center;
 }
 .card {
-	width: 24.4%;
-	margin-left: 10px
+	width: 280px;
+	height: 200px;
+	margin: 7px;
+}
+
+.btn {
+	margin: 0 15px;
 }
 
 .card-text {
