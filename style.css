@@ -8,15 +8,21 @@ html {
 body {
 	position: relative;
 	background:rgba(28, 58, 99, 0.3);
-	color:rgb(224, 237, 255);
 	display:block;
 }
 .lead {
 	font-weight: bold;
 }
-.card {
-	color:rgb(224, 237, 255);
+
+.card, .jumbotron {
 	background:rgb(28, 58, 99, 0.7);
+}
+
+.card, body, jumbotron, .card-text{
+	color:rgb(224, 237, 255);
+
+}
+.card {
 	text-align:center;
 	width: 280px;
 	height: 180px;
@@ -27,7 +33,7 @@ body {
 	margin:10px 80px;
 	padding:30px 30px;
 	
-	background:rgba(28, 58, 99, 0.5);
+	background:rgba(28, 58, 99, 0.7);
 	text-align:center;
 }
 .describe {
@@ -42,13 +48,8 @@ body {
 	padding-bottom: 150px;
 }
 .row {
-	color:white;
 	align-items: center;
 	margin-bottom:20px
-}
-
-.card-text {
-	color:rgb(224, 237, 255);
 }
 
 .section {
