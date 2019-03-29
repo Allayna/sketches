@@ -18,10 +18,20 @@ body {
 	background:rgb(28, 58, 99, 0.7);
 }
 
-.card, body, jumbotron, .card-text{
+.card, body, jumbotron, .card-text, .btn-outline-light{
 	color:rgb(224, 237, 255);
-
 }
+
+.btn-outline-light {
+	border-color: rgb(224, 237, 255);
+}
+
+.btn-outline-light:hover{
+	background-color: rgb(224, 237, 255);
+	color: 24, 41, 72;
+	border-color: rgb(224, 237, 255);
+}
+
 .card {
 	text-align:center;
 	width: 280px;
