@@ -1,5 +1,5 @@
 html {
-	background: url("background.jpg") no-repeat center center fixed; 
+	background: url("back.jpeg") no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -7,16 +7,16 @@ html {
 }
 body {
 	position: relative;
-	background:rgba(31, 71, 20, 0.7);
-	color:rgb(220, 247, 223);
+	background:rgba(28, 58, 99, 0.3);
+	color:rgb(224, 237, 255);
 	display:block;
 }
 .lead {
 	font-weight: bold;
 }
 .card {
-	color:rgb(220, 247, 223);
-	background:rgb(27, 56, 18, 0.8);
+	color:rgb(224, 237, 255);
+	background:rgb(28, 58, 99, 0.7);
 	text-align:center;
 	width: 280px;
 	height: 180px;
@@ -24,8 +24,10 @@ body {
 }
 
 .jumbotron {
-	padding-top:70px;
-	background:rgba(27, 56, 18, 0.8);
+	margin:10px 80px;
+	padding:30px 30px;
+	
+	background:rgba(28, 58, 99, 0.5);
 	text-align:center;
 }
 .describe {
@@ -42,8 +44,13 @@ body {
 .row {
 	color:white;
 	align-items: center;
+	margin-bottom:20px
 }
 
 .card-text {
-	color:rgb(220, 247, 223);
+	color:rgb(224, 237, 255);
+}
+
+.section {
+	padding: 20px 0;
 }
