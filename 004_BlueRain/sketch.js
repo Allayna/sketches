@@ -1,4 +1,5 @@
 var drops = [];
+colorMode(HSB);
 
 function setup() {
   createCanvas(640, 360);
