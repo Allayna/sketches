@@ -2,11 +2,11 @@ var circles;
 var img;
 
 function preload() {
-  img = loadImage("assets/kitten.png");
+  img = loadImage("assets/colorwheel.png");
 }
 
 function setup() {
-  createCanvas(1024, 961);
+  createCanvas(600, 600);
   var density = displayDensity();
   pixelDensity(1);
   img.loadPixels();
