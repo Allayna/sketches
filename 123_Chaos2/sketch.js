@@ -4,7 +4,7 @@ let percent = 0.5;
 let previous;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(1000, 900);
   points = [];
   const n = 5;
 

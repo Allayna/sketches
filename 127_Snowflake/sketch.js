@@ -2,7 +2,7 @@ let current;
 let snowflake = [];
 
 function setup() {
-  createCanvas(600, 675);
+  createCanvas(600, 650);
   current = new Particle(width/2, 0);
 }
 

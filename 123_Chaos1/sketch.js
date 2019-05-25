@@ -4,7 +4,7 @@ let cx, cy;
 let x, y;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(1000, 800);
   ax = width / 2;
   ay = 0;
   bx = 0;
