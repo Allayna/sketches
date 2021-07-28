@@ -122,10 +122,6 @@ function game() {
   text(score, 115, 35);
   text(lives, 330, 35);
 
-  stroke(255);
-  strokeWeight(5);
-  line(0, 450, width, 450);
-
   if (aliens.length == 0 && bossHitPoints == 0) {
     endGame('win');
   }
