@@ -149,7 +149,7 @@ function splash() {
 	text('PRESS SPACE TO FIRE ROCKETS', width / 2, 320);
 	text('WATCH OUT FOR BOSS ROCKETS', width / 2, 350);
 	text('DESTROY ALL ALIENS TO WIN', width / 2, 380);
-	text('CLICK THE SCREEN TO BEGIN', width / 2, 450);
+	text('PRESS SPACE TO BEGIN', width / 2, 450);
 }
 
 function endGame(result) {

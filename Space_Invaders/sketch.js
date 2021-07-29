@@ -88,19 +88,15 @@ function draw() {
 }
 
 function keyPressed() {
-  if (stage == 'game') {
-    if (key == ' ' && rockets.length < rocketLimit) {
-      fireSound.play();
-      rockets.push(new Rocket(player1.x, player1.y, 5, 20, 5));
-    }
-  }
-}
-
-function mousePressed() {
-  if (stage == 'splash') {
-    stage = 'game';
-    if (!startSound.isPlaying()) {
-      startSound.play();
+  if (key == ' ') {
+    if (stage == 'game' && rockets.length < rocketLimit) {
+        fireSound.play();
+        rockets.push(new Rocket(player1.x, player1.y, 5, 20, 5));
+    } else if (stage == 'splash') {
+      stage = 'game';
+      if (!startSound.isPlaying()) {
+        startSound.play();
+      }
     }
   }
 }
