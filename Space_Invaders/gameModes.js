@@ -102,9 +102,13 @@ function game() {
 
   player1.show();
   if (keyIsDown(LEFT_ARROW)) {
-    player1.move(-player1.speed);
+    if (player1.x - player1.w / 2 > 3) {
+      player1.move(-player1.speed);
+    }
   } else if (keyIsDown(RIGHT_ARROW)) {
-    player1.move(player1.speed);
+    if (player1.x + player1.w / 2 < width - 3) {
+      player1.move(player1.speed);
+    }
   }
 
   splashTime = splashTime;
